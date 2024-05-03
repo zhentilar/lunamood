@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProgressBar from './ProgressBar';
+import ProgressBar from './ProgressBar.tsx';
 
 const PhaseContainer = styled.div`
   display: flex;
