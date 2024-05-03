@@ -17,29 +17,39 @@ const App: React.FC = () => {
       description: 'Yeni Ay resmi',
     },
     {
+      name: 'Hilal',
+      image: 'https://placehold.it/300x300',
+      description: 'Hilal resmi',
+    },
+    {
+      name: 'İlk Dördün',
+      image: 'https://placehold.it/300x300',
+      description: 'İlk Dördün resmi',
+    },
+    {
+      name: 'Şişkin Ay',
+      image: 'https://placehold.it/300x300',
+      description: 'Şişkin Ay resmi',
+    },
+    {
       name: 'Dolunay',
       image: 'https://placehold.it/300x300',
       description: 'Dolunay resmi',
     },
     {
-      name: 'Boğaz Ayı',
+      name: 'Şişkin Ay',
       image: 'https://placehold.it/300x300',
-      description: 'Boğaz Ayı resmi',
+      description: 'Şişkin Ay resmi',
     },
     {
-      name: 'Geçer Ayı',
+      name: 'Son Dördün',
       image: 'https://placehold.it/300x300',
-      description: 'Geçer Ayı resmi',
+      description: 'Son Dördün resmi',
     },
     {
-      name: 'Büyük Boğaz Ayı',
+      name: 'Hilal',
       image: 'https://placehold.it/300x300',
-      description: 'Büyük Boğaz Ayı resmi',
-    },
-    {
-      name: 'Büyük Ay',
-      image: 'https://placehold.it/300x300',
-      description: 'Büyük Ay resmi',
+      description: 'Hilal resmi',
     },
   ];
 
