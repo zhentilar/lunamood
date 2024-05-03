@@ -7,12 +7,11 @@ import MoonInfo from './components/MoonInfo.tsx';
 import MoonCalendar from './components/MoonCalendar.tsx';
 import ProgressBar from './components/ProgressBar.tsx';
 
-// Uygulamanın ana bileşeni
 const App: React.FC = () => {
-  // Güncel aşamayı saklamak için state kullanılır
+  // Mevcut fazı takip etmek için state tanımlanır
   const [currentPhase, setCurrentPhase] = useState(0);
 
-  // Ayın farklı aşamaları ve bilgileri
+  // Ay fazları verisi tanımlanır
   const moonPhases = [
     {
       name: 'Yeni Ay',
@@ -24,48 +23,82 @@ const App: React.FC = () => {
       image: 'https://placehold.it/300x300',
       description: 'Hilal resmi',
     },
-    // Diğer aşamalar burada yer alır
+    {
+      name: 'İlk Dördün',
+      image: 'https://placehold.it/300x300',
+      description: 'İlk Dördün resmi',
+    },
+    {
+      name: 'Şişkin Ay',
+      image: 'https://placehold.it/300x300',
+      description: 'Şişkin Ay resmi',
+    },
+    {
+      name: 'Dolunay',
+      image: 'https://placehold.it/300x300',
+      description: 'Dolunay resmi',
+    },
+    {
+      name: 'Şişkin Ay',
+      image: 'https://placehold.it/300x300',
+      description: 'Şişkin Ay resmi',
+    },
+    {
+      name: 'Son Dördün',
+      image: 'https://placehold.it/300x300',
+      description: 'Son Dördün resmi',
+    },
+    {
+      name: 'Hilal',
+      image: 'https://placehold.it/300x300',
+      description: 'Hilal resmi',
+    },
+    {
+      name: 'Yeni Ay',
+      image: 'https://placehold.it/300x300',
+      description: 'Yeni Ay resmi',
+    }
   ];
 
-  // Toplam aşama sayısı ve ilerleme çubuğu için hesaplama yapılır
+  // Toplam faz sayısı belirlenir
   const totalPhases = moonPhases.length;
+  
+  // Mevcut ilerlemeyi hesaplar
   const currentProgress = (currentPhase / (totalPhases - 1)) * 100;
 
   return (
     <Router>
       <div className="App">
-        {/* Uygulamanın başlığı */}
         <header className="App-header">
           <h1>Lunamood</h1>
         </header>
         <main className="App-main">
           <Routes>
-            {/* Ana sayfa rotası */}
             <Route
               path="/"
               element={
                 <>
-                  {/* Güncel ay aşamasını gösteren bileşen */}
+                  {/* MoonPhase bileşeni mevcut fazı görüntüler */}
                   <MoonPhase
                     phase={moonPhases[currentPhase]}
                     totalPhases={totalPhases}
                     currentPhase={currentPhase}
                   />
-                  {/* Kontroller bileşeni */}
+                  {/* Kontroller bileşeni mevcut fazı işaretler */}
                   <Controls
                     totalPhases={totalPhases}
                     currentPhase={currentPhase}
                     setCurrentPhase={setCurrentPhase}
                   />
-                  {/* Güncel ay aşamasının bilgilerini gösteren bileşen */}
+                  {/* MoonInfo bileşeni mevcut faz hakkında bilgi sağlar */}
                   <MoonInfo phase={moonPhases[currentPhase]} />
                 </>
               }
             />
-            {/* Takvim sayfası rotası */}
+            {/* Ay Takvimi bileşeni yolunu tanımlar */}
             <Route path="/calendar" element={<MoonCalendar />} />
           </Routes>
-          {/* İlerleme çubuğu bileşeni */}
+          {/* İlerleme çubuğu bileşeni mevcut ilerlemeyi gösterir */}
           <ProgressBar progress={currentProgress} />
         </main>
       </div>
