@@ -59,7 +59,7 @@ const App: React.FC = () => {
   ];
 
   const totalPhases = moonPhases.length;
-  const currentProgress = (currentPhase / totalPhases) * 100;
+  const currentProgress = (currentPhase / (totalPhases - 1)) * 100;
 
   return (
     <Router>
