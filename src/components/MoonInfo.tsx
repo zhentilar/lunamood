@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Bileşen için stillendirilmiş bileşenler oluşturulur
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@ const InfoImage = styled.img`
 
 const InfoTitle = styled.h2`
   font-size: 24px;
-  margin-bottom:8px;
+  margin-bottom: 8px;
 `;
 
 const InfoDescription = styled.p`
@@ -25,6 +26,7 @@ const InfoDescription = styled.p`
   margin-bottom: 16px;
 `;
 
+// Ay aşaması bilgisi bileşeni için gerekli prop'ları tanımlar
 interface MoonInfoProps {
   phase: {
     name: string;
@@ -33,14 +35,15 @@ interface MoonInfoProps {
   };
 }
 
+// Ay aşaması bilgisi bileşeni
 const MoonInfo: React.FC<MoonInfoProps> = ({ phase }) => {
   return (
     <InfoContainer>
-      <InfoImage src={phase.image} alt={phase.name} />
-      <InfoTitle>{phase.name}</InfoTitle>
-      <InfoDescription>{phase.description}</InfoDescription>
+      <InfoImage src={phase.image} alt={phase.name} /> {/* Aşama resmi */}
+      <InfoTitle>{phase.name}</InfoTitle> {/* Aşama adı */}
+      <InfoDescription>{phase.description}</InfoDescription> {/* Aşama açıklaması */}
     </InfoContainer>
   );
 };
 
-export default MoonInfo;
+export default MoonInfo; // Ay aşaması bilgisi bileşeni dışa aktarılır

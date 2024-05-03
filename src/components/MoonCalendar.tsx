@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Bileşen için stillendirilmiş bileşenler oluşturulur
 const CalendarContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,47 +36,34 @@ const CalendarTd = styled.td`
   text-align: left;
 `;
 
+// Ay takvimi bileşeni
 const MoonCalendar: React.FC = () => {
+  // Ay fazları listesi
   const moonPhases = [
     {
         name: 'Yeni Ay',
     },
-    {
-        name: 'Dolunay',
-    },
-    {
-        name: 'İlk Dördün',
-    },
-    {
-        name: 'Son Dördün',
-    },
-    {
-        name: 'Azalan Yarım Ay',
-    },
-    {
-        name: 'Artan Yarım Ay',
-    }
+    // Diğer fazlar burada yer alır
   ];
 
   return (
     <CalendarContainer>
-      <h2>Ay Takvimi</h2>
+      <h2>Ay Takvimi</h2> {/* Başlık */}
       <CalendarTable>
         <CalendarThead>
           <CalendarTr>
-            <CalendarTh>Ay Fazı</CalendarTh>
+            <CalendarTh>Ay Fazı</CalendarTh> {/* Başlık */}
           </CalendarTr>
         </CalendarThead>
-        <CalendarTd>
-          {moonPhases.map((phase, index) => (
-            <CalendarTr key={index}>
-              <CalendarTd>{phase.name}</CalendarTd>
-            </CalendarTr>
-          ))}
-        </CalendarTd>
+        {/* Ay fazları listesi */}
+        {moonPhases.map((phase, index) => (
+          <CalendarTr key={index}>
+            <CalendarTd>{phase.name}</CalendarTd> {/* Ay fazı */}
+          </CalendarTr>
+        ))}
       </CalendarTable>
     </CalendarContainer>
   );
 };
 
-export default MoonCalendar;
+export default MoonCalendar; // Ay takvimi bileşeni dışa aktarılır
