@@ -51,6 +51,11 @@ const App: React.FC = () => {
       image: 'https://placehold.it/300x300',
       description: 'Hilal resmi',
     },
+    {
+      name: 'Yeni Ay',
+      image: 'https://placehold.it/300x300',
+      description: 'Yeni Ay resmi',
+    }
   ];
 
   const totalPhases = moonPhases.length;
