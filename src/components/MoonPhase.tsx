@@ -31,7 +31,7 @@ interface MoonPhaseProps {
 }
 
 const MoonPhase: React.FC<MoonPhaseProps> = ({ phase, totalPhases, currentPhase }) => {
-  const progressPercentage = (currentPhase / totalPhases) * 100;
+  const progressPercentage = Math.round((currentPhase / totalPhases) * 100);
 
   return (
     <PhaseContainer>
