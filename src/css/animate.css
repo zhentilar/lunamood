@@ -1,0 +1,690 @@
+/* :root */
+
+:root {
+  --animate-duration: 0.3s;
+  --animate-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animate-delay: 0s;
+}
+
+/* animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceOut {
+  from {
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  from {
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  50%,
+  to {
+    opacity: 0;
+    transform: scale3d(0.35, 0.35, 0.35);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -210deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -210deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+/* classes */
+
+.animated {
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+}
+
+.animated.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated.fadeOut {
+  animation-name: fadeOut;
+}
+
+.animated.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animated.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animated.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animated.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animated.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+.animated.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+.animated.fadeOutRight {
+  animation-name: fadeOutRight;
+}
+
+.animated.fadeOutUp {
+  animation-name: fadeOutUp;
+}
+
+.animated.bounceIn {
+  animation-name: bounceIn;
+}
+
+.animated.bounceOut {
+  animation-name: bounceOut;
+}
+
+.animated.rotateIn {
+  animation-name: rotateIn;
+}
+
+.animated.rotateOut {
+  animation-name: rotateOut;
+}
+
+.animated.slideInUp {
+  animation-name: slideInUp;
+}
+
+.animated.slideInDown {
+  animation-name: slideInDown;
+}
+
+.animated.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+.animated.slideInRight {
+  animation-name: slideInRight;
+}
+
+.animated.slideOutUp {
+  animation-name: slideOutUp;
+}
+
+.animated.slideOutDown {
+  animation-name: slideOutDown;
+}
+
+.animated.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+.animated.slideOutRight {
+  animation-name: slideOutRight;
+}
+
+.animated.fast {
+  animation-duration: 0.2s;
+}
+
+.animated.slow {
+  animation-duration: 1s;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.delay-1s {
+  animation-delay: 1s;
+}
+
+.animated.delay-2s {
+  animation-delay: 2s;
+}
+
+.animated.delay-3s {
+  animation-delay: 3s;
+}
+
+.animated.delay-4s {
+  animation-delay: 4s;
+}
+
+.animated.delay-5s {
+  animation-delay: 5s;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flip {
+  animation-duration: 1s;
+}
+
+.animated.bounce {
+  animation-duration: 1s;
+}
+
+.animated.rubberBand {
+  animation-duration: 1s;
+}
+
+.animated.shake {
+  animation-duration: 0.5s;
+}
+
+.animated.headShake {
+  animation-duration: 0.75s;
+}
+
+.animated.swing {
+  animation-duration: 2s;
+}
+
+.animated.tada {
+  animation-duration: 0.5s;
+}
+
+.animated.wobble {
+  animation-duration: 1s;
+}
+
+.animated.jello {
+  animation-duration: 0.7s;
+}
+
+.animated.pulse {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.animated.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+.animated.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+.animated.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+.animated.bounceInUp {
+  animation-name: bounceInUp;
+}
+
+.animated.bounceOutDown {
+  animation-name: bounceOutDown;
+}
+
+.animated.bounceOutLeft {
+  animation-name: bounceOutLeft;
+}
+
+.animated.bounceOutRight {
+  animation-name: bounceOutRight;
+}
+
+.animated.bounceOutUp {
+  animation-name: bounceOutUp;
+}
+
+.animated.rotateInDownLeft {
+  animation-name: rotateInDownLeft;
+}
+
+.animated.rotateInDownRight {
+  animation-name: rotateInDownRight;
+}
+
+.animated.rotateInUpLeft {
+  animation-name: rotateInUpLeft;
+}
+
+.animated.rotateInUpRight {
+  animation-name: rotateInUpRight;
+}
+
+.animated.rotateOutDownLeft {
+  animation-name: rotateOutDownLeft;
+}
+
+.animated.rotateOutDownRight {
+  animation-name: rotateOutDownRight;
+}
+
+.animated.rotateOutUpLeft {
+  animation-name: rotateOutUpLeft;
+}
+
+.animated.rotateOutUpRight {
+  animation-name: rotateOutUpRight;
+}
+
+.animated.lightSpeedIn {
+  animation-name: lightSpeedIn;
+}
+
+.animated.lightSpeedOut {
+  animation-name: lightSpeedOut;
+}
+
+.animated.flipInX {
+  animation-name: flipInX;
+}
+
+.animated.flipInY {
+  animation-name: flipInY;
+}
+
+.animated.flipOutX {
+  animation-name: flipOutX;
+}
+
+.animated.flipOutY {
+  animation-name: flipOutY;
+}
+
+.animated.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated.fadeOut {
+  animation-name: fadeOut;
+}
+
+.animated.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animated.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animated.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animated.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animated.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+.animated.fadeOutRight {
+  animation-name: fadeOutRight;
+}
+
+.animated.fadeOutUp {
+  animation-name: fadeOutUp;
+}
+
+.animated.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+.animated.zoomIn {
+  animation-name: zoomIn;
+}
+
+.animated.zoomOut {
+  animation-name: zoomOut;
+}
+
+.animated.zoomInUp {
+  animation-name: zoomInUp;
+}
+
+.animated.zoomInDown {
+  animation-name: zoomInDown;
+}
+
+.animated.zoomInLeft {
+  animation-name: zoomInLeft;
+}
+
+.animated.zoomInRight {
+  animation-name: zoomInRight;
+}
+
+.animated.zoomOutUp {
+  animation-name: zoomOutUp;
+}
+
+.animated.zoomOutDown {
+  animation-name: zoomOutDown;
+}
+
+.animated.zoomOutLeft {
+  animation-name: zoomOutLeft;
+}
+
+.animated.zoomOutRight {
+  animation-name: zoomOutRight;
+}
+
+.animated.slideInUp {
+  animation-name: slideInUp;
+}
+
+.animated.slideInDown {
+  animation-name: slideInDown;
+}
+
+.animated.slideInLeft{
+  animation-name: slideInLeft;
+}
+
+.animated.slideInRight {
+  animation-name: slideInRight;
+}
+
+.animated.slideOutUp {
+  animation-name: slideOutUp;
+}
+
+.animated.slideOutDown {
+  animation-name: slideOutDown;
+}
+
+.animated.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+.animated.slideOutRight {
+  animation-name: slideOutRight;
+}
+
+.animated.heartBeat {
+  animation-name: heartBeat;
+}
+
+.animated.rollIn {
+  animation-name: rollIn;
+}
+
+.animated.rollOut {
+  animation-name: rollOut;
+}
+
+.animated.jackInTheBox {
+  animation-name: jackInTheBox;
+}
+
+.animated.hinge {
+  animation-name: hinge;
+}
+
+/* utilities */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

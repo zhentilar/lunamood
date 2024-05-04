@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 // Bileşen için stillendirilmiş bileşenler oluşturulur
@@ -30,6 +30,8 @@ interface ControlsProps {
 
 // Kontroller bileşeni
 const Controls: React.FC<ControlsProps> = ({ totalPhases, currentPhase, setCurrentPhase }) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   // Önceki aşamaya geçiş işlevi
   const handlePrevious = () => {
     setCurrentPhase((prevPhase) => Math.max(prevPhase - 1, 0));
@@ -42,7 +44,7 @@ const Controls: React.FC<ControlsProps> = ({ totalPhases, currentPhase, setCurre
 
   return (
     <ControlsContainer>
-      <ControlsButton onClick={handlePrevious}>Önceki</ControlsButton> {/* Önceki düğme */}
+      <ControlsButton onClick={handlePrevious} ref={buttonRef}>Önceki</ControlsButton> {/* Önceki düğme */}
       <ControlsButton onClick={handleNext}>Sonraki</ControlsButton> {/* Sonraki düğme */}
     </ControlsContainer>
   );
