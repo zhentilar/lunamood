@@ -70,7 +70,7 @@ const App: React.FC = () => {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Lunamood</h1>
+        <h1>🌙 Lunamood</h1>
         </header>
         <main className="App-main">
           <Routes>
@@ -84,6 +84,7 @@ const App: React.FC = () => {
                     totalPhases={totalPhases}
                     currentPhase={currentPhase}
                   />
+                  <img src={'https://placehold.it/100x100'} alt="Player" />
                   {/* Kontroller bileşeni mevcut fazı işaretler */}
                   <Controls
                     totalPhases={totalPhases}
