@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MoonPhase from './components/MoonPhase.tsx';
@@ -6,11 +6,23 @@ import Controls from './components/Controls.tsx';
 import MoonInfo from './components/MoonInfo.tsx';
 import MoonCalendar from './components/MoonCalendar.tsx';
 import ProgressBar from './components/ProgressBar.tsx';
+import FancyCarousel from "react-fancy-circular-carousel";
+import 'react-fancy-circular-carousel/FancyCarousel.css';
+const image1 = 'lunamood/src/assets/image1.png';
+const image2 = 'lunamood/src/assets/image2.png';
+const image3 = 'lunamood/src/assets/image3.png';
+const image4 = 'lunamood/src/assets/image4.png';
+const image5 = 'lunamood/src/assets/image5.png';
+const image6 = 'lunamood/src/assets/image6.png';
+const image7 = 'lunamood/src/assets/image7.png';
+const image8 = 'lunamood/src/assets/image8.png';
 
 const App: React.FC = () => {
   // Mevcut fazı takip etmek için state tanımlanır
   const [currentPhase, setCurrentPhase] = useState(0);
-
+  const [focusElement, setFocusElement] = useState(0);
+  const images = [image1, image2, image3, image4, image5, image6, image7, image8];
+  const info = ['Yeni Ay', 'Hilal', 'İlk Dördün', 'Şişkin Ay', 'Dolunay', 'Şişkin Ay', 'Son Dördün', 'Hilal', 'Yeni Ay'];
   // Ay fazları verisi tanımlanır
   const moonPhases = [
     {
@@ -103,8 +115,27 @@ const App: React.FC = () => {
           <ProgressBar progress={currentProgress} />
         </main>
       </div>
+
+      <div className="carousel" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '140vh' }}>
+      <FancyCarousel 
+      images={images} 
+      setFocusElement={setFocusElement}
+      offsetAngle={0}
+      carouselRadius={400}
+      peripheralImageRadius={100}
+      centralImageRadius={150}
+      focusElementStyling={{border: '2px solid #ba4949'}}
+      border={true}
+      borderWidth={2}
+      borderHexColor={'1c364f'}/>
+      
+      <div className="info-box-wrapper">
+        <p> {info[focusElement]} </p>
+      </div>
+    <div>
+      </div>
+      </div>
     </Router>
   );
 };
-
 export default App;
