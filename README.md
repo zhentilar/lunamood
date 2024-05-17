@@ -19,7 +19,7 @@ Lunamood, React kütüphanesini kullanarak geliştirilmiştir. React'i kullanmak
 
 # Lunamood klonlamak için
 ```bash
-git clone https://github.com/yourusername/lunamood.git
+git clone https://github.com/zhentilar/lunamood.git
 ```
 # Dizine geçin
 ```bash
