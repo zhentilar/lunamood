@@ -107,6 +107,7 @@ const App: React.FC = () => {
                   {/* MoonInfo bileşeni mevcut faz hakkında bilgi sağlar */}
                   <MoonInfo phase={moonPhases[currentPhase]} />
                   <H5PComponent /> {/* H5PComponent bileşenini ekledim */}
+                  
                 </>
               }
             />
