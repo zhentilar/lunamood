@@ -8,6 +8,7 @@ import MoonCalendar from './components/MoonCalendar.tsx';
 import ProgressBar from './components/ProgressBar.tsx';
 import FancyCarousel from "react-fancy-circular-carousel";
 import 'react-fancy-circular-carousel/FancyCarousel.css';
+import H5PComponent from './components/H5PComponent.tsx';
 const image1 = 'lunamood/src/assets/image1.png';
 const image2 = 'lunamood/src/assets/image2.png';
 const image3 = 'lunamood/src/assets/image3.png';
@@ -105,6 +106,7 @@ const App: React.FC = () => {
                   />
                   {/* MoonInfo bileşeni mevcut faz hakkında bilgi sağlar */}
                   <MoonInfo phase={moonPhases[currentPhase]} />
+                  <H5PComponent /> {/* H5PComponent bileşenini ekledim */}
                 </>
               }
             />
