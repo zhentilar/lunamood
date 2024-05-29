@@ -23,54 +23,51 @@ const App: React.FC = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
   const [focusElement, setFocusElement] = useState(0);
   const images = [image1, image2, image3, image4, image5, image6, image7, image8];
-  const info = ['Yeni Ay', 'Hilal', 'İlk Dördün', 'Şişkin Ay', 'Dolunay', 'Şişkin Ay', 'Son Dördün', 'Hilal', 'Yeni Ay'];
-  // Ay fazları verisi tanımlanır
-  const moonPhases = [
+  const info = [
     {
       name: 'Yeni Ay',
-      image: 'https://placehold.it/300x300',
-      description: 'Yeni Ay resmi',
+      description: 'Yeni Ay, Ayın başlangıç evresidir ve gökyüzünde görünmez.'
     },
     {
       name: 'Hilal',
-      image: 'https://placehold.it/300x300',
-      description: 'Hilal resmi',
+      description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.'
     },
     {
       name: 'İlk Dördün',
-      image: 'https://placehold.it/300x300',
-      description: 'İlk Dördün resmi',
+      description: 'İlk Dördün, Ay’ın yarısının aydınlandığı ve yarısının karanlık olduğu evredir.'
     },
     {
       name: 'Şişkin Ay',
-      image: 'https://placehold.it/300x300',
-      description: 'Şişkin Ay resmi',
+      description: 'Şişkin Ay evresi, Ay’ın tam olarak dolmadan hemen önceki evredir.'
     },
     {
       name: 'Dolunay',
-      image: 'https://placehold.it/300x300',
-      description: 'Dolunay resmi',
+      description: 'Dolunay, Ay’ın tamamen aydınlandığı ve parlak bir şekilde gökyüzünde görüldüğü evredir.'
     },
     {
       name: 'Şişkin Ay',
-      image: 'https://placehold.it/300x300',
-      description: 'Şişkin Ay resmi',
+      description: 'Şişkin Ay, Ay’ın yavaşça küçülmeye başladığı evredir.'
     },
     {
       name: 'Son Dördün',
-      image: 'https://placehold.it/300x300',
-      description: 'Son Dördün resmi',
+      description: 'Son Dördün, Ay’ın yarısının aydınlandığı ve diğer yarısının karanlık olduğu bir evredir.'
     },
     {
       name: 'Hilal',
-      image: 'https://placehold.it/300x300',
-      description: 'Hilal resmi',
-    },
-    {
-      name: 'Yeni Ay',
-      image: 'https://placehold.it/300x300',
-      description: 'Yeni Ay resmi',
+      description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.'
     }
+  ];
+  // Ay fazları verisi tanımlanır
+  const moonPhases = [
+    { name: 'Yeni Ay', image: 'https://placehold.it/300x300', description: 'Yeni Ay, Ayın başlangıç evresidir ve gökyüzünde görünmez.' },
+    { name: 'Hilal', image: 'https://placehold.it/300x300', description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.' },
+    { name: 'İlk Dördün', image: 'https://placehold.it/300x300', description: 'İlk Dördün, Ay’ın yarısının aydınlandığı ve yarısının karanlık olduğu evredir.' },
+    { name: 'Şişkin Ay', image: 'https://placehold.it/300x300', description: 'Şişkin Ay evresi, Ay’ın tam olarak dolmadan hemen önceki evredir.' },
+    { name: 'Dolunay', image: 'https://placehold.it/300x300', description: 'Dolunay, Ay’ın tamamen aydınlandığı ve parlak bir şekilde gökyüzünde görüldüğü evredir.' },
+    { name: 'Şişkin Ay', image: 'https://placehold.it/300x300', description: 'Şişkin Ay, Ay’ın yavaşça küçülmeye başladığı evredir.' },
+    { name: 'Son Dördün', image: 'https://placehold.it/300x300', description: 'Son Dördün, Ay’ın yarısının aydınlandığı ve diğer yarısının karanlık olduğu bir evredir.' },
+    { name: 'Hilal', image: 'https://placehold.it/300x300', description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.' },
+    { name: 'Yeni Ay', image: 'https://placehold.it/300x300', description: 'Yeni Ay, Ayın başlangıç evresidir ve gökyüzünde görünmez.' }
   ];
 
   // Toplam faz sayısı belirlenir
@@ -118,25 +115,28 @@ const App: React.FC = () => {
           <ProgressBar progress={currentProgress} />
         </main>
       </div>
-
-      <div className="carousel" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '140vh' }}>
-      <FancyCarousel 
-      images={images} 
-      setFocusElement={setFocusElement}
-      offsetAngle={0}
-      carouselRadius={400}
-      peripheralImageRadius={100}
-      centralImageRadius={150}
-      focusElementStyling={{border: '2px solid #ba4949'}}
-      border={true}
-      borderWidth={2}
-      borderHexColor={'1c364f'}/>
-      
-      <div className="info-box-wrapper">
-        <p> {info[focusElement]} </p>
-      </div>
-    <div>
-      </div>
+      <div className="container" style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', justifyContent: 'center', alignItems: 'center'}}>
+        <div className="carousel" style={{ display: 'flex',flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '140vh' }}>
+          <FancyCarousel 
+          images={images} 
+          setFocusElement={setFocusElement}
+          offsetAngle={0}
+          carouselRadius={300}
+          peripheralImageRadius={100}
+          centralImageRadius={150}
+          focusElementStyling={{border: '2px solid #ba4949'}}
+          border={true}
+          borderWidth={2}
+          borderHexColor={'1c364f'}
+        />
+          
+          <div className="info-box-wrapper" style={{ padding: '20px', border: '2px solid #ccc', marginLeft: '100px', width: '400px'}}>
+          <h2>{info[focusElement].name}</h2>
+          <p>{info[focusElement].description}</p>
+          </div>
+        <div>
+        </div>
+        </div>
       </div>
     </Router>
   );
