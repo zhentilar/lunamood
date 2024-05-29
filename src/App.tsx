@@ -9,14 +9,15 @@ import ProgressBar from './components/ProgressBar.tsx';
 import FancyCarousel from "react-fancy-circular-carousel";
 import 'react-fancy-circular-carousel/FancyCarousel.css';
 import H5PComponent from './components/H5PComponent.tsx';
-const image1 = require('./assets/image1.png');
-const image2 = require('./assets/image2.png');  
-const image3 = require('./assets/image3.png');
-const image4 = require('./assets/image4.png');
-const image5 = require('./assets/image5.png');
-const image6 = require('./assets/image6.png');
-const image7 = require('./assets/image7.png');
-const image8 = require('./assets/image8.png');
+import moonPhase from './components/MoonPhase.tsx';
+const image1 = require('./assets/yeniay.png');
+const image2 = require('./assets/hilal.png');  
+const image3 = require('./assets/ilkdordun.png');
+const image4 = require('./assets/siskinay.png');
+const image5 = require('./assets/dolunay.png');
+const image6 = require('./assets/siskinay2.png');
+const image7 = require('./assets/sondordun.png');
+const image8 = require('./assets/hilal2.png');
 
 const App: React.FC = () => {
   // Mevcut fazı takip etmek için state tanımlanır

@@ -23,6 +23,7 @@ const PhaseTitle = styled.h2`
 
 // Ay aşaması bileşeni için gerekli prop'ları tanımlar
 interface MoonPhaseProps {
+  image?: string;
   phase: {
     name: string;
     image: string;
