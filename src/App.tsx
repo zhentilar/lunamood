@@ -1,9 +1,6 @@
 import React, { useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import MoonPhase from './components/MoonPhase.tsx';
-import Controls from './components/Controls.tsx';
-import MoonInfo from './components/MoonInfo.tsx';
 import MoonCalendar from './components/MoonCalendar.tsx';
 import ProgressBar from './components/ProgressBar.tsx';
 import FancyCarousel from "react-fancy-circular-carousel";
