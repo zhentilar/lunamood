@@ -26,55 +26,54 @@ const App: React.FC = () => {
   const info = [
     {
       name: 'Yeni Ay',
-      description: 'Yeni Ay, Ayın başlangıç evresidir ve gökyüzünde görünmez.'
+      description: "Ay'ın Dünya ve Güneş'in ortasında olduğu evredir. Ay'ın Dünya'ya bakan kısmı Güneş ışığını alamadığı için Dünya'dan bakıldığında Ay görülmez. Yaklaşık olarak her 29.5 günde bir, yeni bir ay döngüsü başlar."
     },
     {
       name: 'Hilal',
-      description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.'
+      description: "Yeni Ay ile İlk Dördün evresi arasında yer alır. Ay, ters ''C'' şeklinde görülür. Ay, Dünya etrafında ilerlemeye başlar ve Güneş'ten yeterince uzaklaştığında aydınlanmış yüzünün ince bir kısmı görünmeye başlar. Bu aydınlanmış kısma Hilal denir. Yeni Ay'dan yaklaşık 1-2 gün sonra meydana gelir."
     },
     {
       name: 'İlk Dördün',
-      description: 'İlk Dördün, Ay’ın yarısının aydınlandığı ve yarısının karanlık olduğu evredir.'
+      description: "Yeni Ay evresinden yaklaşık 7 gün sonra görülür. Ay, Güneş ve Dünya'ya göre 90 derece açı yaptığında, yarısı aydınlanır ve diğer yarısı karanlık kalır. Ay ''D'' şeklinde görülür."
     },
     {
       name: 'Şişkin Ay',
-      description: 'Şişkin Ay evresi, Ay’ın tam olarak dolmadan hemen önceki evredir.'
+      description: "Ay'ın İlk Dördün evresi ile Dolunay evresi arasında görüldüğü ara evredir. Dolunay öncesi şişkin Ay ve Dolunay sonrası şişkin Ay olarak ikiye ayrılır. Ay'ın sağ tarafının yarısından fazlası aydınlanmış olarak görülür. Yaklaşık 7 gün sürer."
     },
     {
       name: 'Dolunay',
-      description: 'Dolunay, Ay’ın tamamen aydınlandığı ve parlak bir şekilde gökyüzünde görüldüğü evredir.'
+      description: "İlk Dördün evresinden 7 gün sonra Dünya, Güneş ile Ay arasında yer alır. Ay'ın Dünya'ya bakan kısmı tamamen aydınlandığından Ay parlak küre şeklinde görülür."
     },
     {
       name: 'Şişkin Ay',
-      description: 'Şişkin Ay, Ay’ın yavaşça küçülmeye başladığı evredir.'
+      description: "Dolunay ve Son Dördün evreleri arasında görülen ara evredir. Ay'ın sol tarafının  yarısından fazlası aydınlanmış olarak görülür. Yaklaşık 7 gün sürer."
     },
     {
       name: 'Son Dördün',
-      description: 'Son Dördün, Ay’ın yarısının aydınlandığı ve diğer yarısının karanlık olduğu bir evredir.'
+      description: "Dolunay evresinden 7 gün sonra görülür. Ay'ın Dünya'dan görünen sol yarısı aydınlandığından Dünya'dan bakıldığında Ay ters ''D'' şeklinde görülür."
     },
     {
       name: 'Hilal',
-      description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.'
+      description: "Ay, Güneş'in doğusunda olduğu zaman gerçekleşir. Son Dördün ve Yeni Ay evreleri arasında Ay ''C'' şeklinde görülür."
     }
   ];
   // Ay fazları verisi tanımlanır
   const moonPhases = [
-    { name: 'Yeni Ay', image: 'https://placehold.it/300x300', description: 'Yeni Ay, Ayın başlangıç evresidir ve gökyüzünde görünmez.' },
-    { name: 'Hilal', image: 'https://placehold.it/300x300', description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.' },
-    { name: 'İlk Dördün', image: 'https://placehold.it/300x300', description: 'İlk Dördün, Ay’ın yarısının aydınlandığı ve yarısının karanlık olduğu evredir.' },
-    { name: 'Şişkin Ay', image: 'https://placehold.it/300x300', description: 'Şişkin Ay evresi, Ay’ın tam olarak dolmadan hemen önceki evredir.' },
-    { name: 'Dolunay', image: 'https://placehold.it/300x300', description: 'Dolunay, Ay’ın tamamen aydınlandığı ve parlak bir şekilde gökyüzünde görüldüğü evredir.' },
-    { name: 'Şişkin Ay', image: 'https://placehold.it/300x300', description: 'Şişkin Ay, Ay’ın yavaşça küçülmeye başladığı evredir.' },
-    { name: 'Son Dördün', image: 'https://placehold.it/300x300', description: 'Son Dördün, Ay’ın yarısının aydınlandığı ve diğer yarısının karanlık olduğu bir evredir.' },
-    { name: 'Hilal', image: 'https://placehold.it/300x300', description: 'Hilal evresi, Ay’ın ışığının solgun bir şekilde belirmeye başladığı evredir.' },
-    { name: 'Yeni Ay', image: 'https://placehold.it/300x300', description: 'Yeni Ay, Ayın başlangıç evresidir ve gökyüzünde görünmez.' }
+    { name: 'Yeni Ay', image: './assets/yeniay.png', description: "Ay'ın Dünya ve Güneş'in ortasında olduğu evredir. Ay'ın Dünya'ya bakan kısmı Güneş ışığını alamadığı için Dünya'dan bakıldığında Ay görülmez. Yaklaşık olarak her 29.5 günde bir, yeni bir ay döngüsü başlar." },
+    { name: 'Hilal', image: './assets/hilal.png', description: "Ay, Güneş'in doğusunda olduğu zaman gerçekleşir. Son Dördün ve Yeni Ay evreleri arasında Ay ''C'' şeklinde görülür." },
+    { name: 'İlk Dördün', image: './assets/ilkdordun.png', description: "Yeni Ay evresinden yaklaşık 7 gün sonra görülür. Ay, Güneş ve Dünya'ya göre 90 derece açı yaptığında, yarısı aydınlanır ve diğer yarısı karanlık kalır. Ay ''D'' şeklinde görülür." },
+    { name: 'Şişkin Ay', image: './assets/siskinay.png', description: "Ay'ın İlk Dördün evresi ile Dolunay evresi arasında görüldüğü ara evredir. Dolunay öncesi şişkin Ay ve Dolunay sonrası şişkin Ay olarak ikiye ayrılır. Ay'ın sağ tarafının yarısından fazlası aydınlanmış olarak görülür. Yaklaşık 7 gün sürer." },
+    { name: 'Dolunay', image: './assets/dolunay.png', description: "İlk Dördün evresinden 7 gün sonra Dünya, Güneş ile Ay arasında yer alır. Ay'ın Dünya'ya bakan kısmı tamamen aydınlandığından Ay parlak küre şeklinde görülür." },
+    { name: 'Şişkin Ay', image: './assets/siskinay2.png', description: "Dolunay ve Son Dördün evreleri arasında görülen ara evredir. Ay'ın sol tarafının  yarısından fazlası aydınlanmış olarak görülür. Yaklaşık 7 gün sürer." },
+    { name: 'Son Dördün', image: './assets/sondordun.png', description: "Dolunay evresinden 7 gün sonra görülür. Ay'ın Dünya'dan görünen sol yarısı aydınlandığından Dünya'dan bakıldığında Ay ters ''D'' şeklinde görülür." },
+    { name: 'Hilal', image: './assets/hilal2.png', description: "Ay, Güneş'in doğusunda olduğu zaman gerçekleşir. Son Dördün ve Yeni Ay evreleri arasında Ay ''C'' şeklinde görülür." }
   ];
+  
 
   // Toplam faz sayısı belirlenir
   const totalPhases = moonPhases.length;
-  
-  // Mevcut ilerlemeyi hesaplar
-  const currentProgress = (currentPhase / (totalPhases - 1)) * 100;
+  const currentProgress = Math.min((currentPhase / (totalPhases - 1)) * 100, 100); // İlerleme yüzdesi 100'ü geçmez
+  const carouselProgress = Math.min((focusElement / (images.length - 1)) * 100, 100); // Carousel ilerlemesi 100'ü geçmez
 
   return (
     <Router>
@@ -88,55 +87,42 @@ const App: React.FC = () => {
               path="/"
               element={
                 <>
-                  {/* MoonPhase bileşeni mevcut fazı görüntüler */}
-                  <MoonPhase
-                    phase={moonPhases[currentPhase]}
-                    totalPhases={totalPhases}
-                    currentPhase={currentPhase}
-                  />
-                  {/* Kontroller bileşeni mevcut fazı işaretler */}
-                  <Controls
-                    totalPhases={totalPhases}
-                    currentPhase={currentPhase}
-                    setCurrentPhase={setCurrentPhase}
-                  />
-                  {/* MoonInfo bileşeni mevcut faz hakkında bilgi sağlar */}
-                  <MoonInfo phase={moonPhases[currentPhase]} />
-                  <H5PComponent /> {/* H5PComponent bileşenini ekledim */}
-                  
-                </>
+                  <div className="container" style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', justifyContent: 'center', alignItems: 'center'}}>
+                    <div className="carousel" style={{ display: 'flex',flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '140vh' }}>
+                      <FancyCarousel 
+                      images={images} 
+                      setFocusElement={setFocusElement}
+                      offsetAngle={0}
+                      carouselRadius={300}
+                      peripheralImageRadius={100}
+                      centralImageRadius={150}
+                      focusElementStyling={{border: '2px solid #ba4949'}}
+                      border={true}
+                      borderWidth={2}
+                      borderHexColor={'1c364f'}
+                    />
+                      
+                      <div className="info-box-wrapper" style={{ padding: '20px', border: '2px solid #ccc', marginLeft: '100px', width: '400px'}}>
+                      <h2>{info[focusElement].name}</h2>
+                      <p>{info[focusElement].description}</p>
+                      </div>
+                    <div>
+                    </div>
+                    </div>
+                    <ProgressBar progress={(focusElement / (images.length - 1)) * 100} />
+                    <H5PComponent /> {/* H5PComponent bileşenini ekledim */}
+                  </div>
+                    </>
               }
             />
             {/* Ay Takvimi bileşeni yolunu tanımlar */}
             <Route path="/calendar" element={<MoonCalendar />} />
           </Routes>
           {/* İlerleme çubuğu bileşeni mevcut ilerlemeyi gösterir */}
-          <ProgressBar progress={currentProgress} />
+          
         </main>
       </div>
-      <div className="container" style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', justifyContent: 'center', alignItems: 'center'}}>
-        <div className="carousel" style={{ display: 'flex',flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '140vh' }}>
-          <FancyCarousel 
-          images={images} 
-          setFocusElement={setFocusElement}
-          offsetAngle={0}
-          carouselRadius={300}
-          peripheralImageRadius={100}
-          centralImageRadius={150}
-          focusElementStyling={{border: '2px solid #ba4949'}}
-          border={true}
-          borderWidth={2}
-          borderHexColor={'1c364f'}
-        />
-          
-          <div className="info-box-wrapper" style={{ padding: '20px', border: '2px solid #ccc', marginLeft: '100px', width: '400px'}}>
-          <h2>{info[focusElement].name}</h2>
-          <p>{info[focusElement].description}</p>
-          </div>
-        <div>
-        </div>
-        </div>
-      </div>
+      
     </Router>
   );
 };

@@ -34,13 +34,16 @@ interface MoonPhaseProps {
 }
 
 // Ay aşaması bileşeni
-const MoonPhase: React.FC<MoonPhaseProps> = ({ phase, totalPhases, currentPhase }) => {
+const MoonPhase: React.FC<MoonPhaseProps> = ({ image, phase, totalPhases, currentPhase }) => {
   // İlerleme yüzdesi hesaplanır
   const progressPercentage = Math.round((currentPhase / totalPhases) * 100);
 
+  // Kullanılacak resmi belirle
+  const imageUrl = image || phase.image;
+
   return (
     <PhaseContainer>
-      <PhaseImage src={phase.image} alt={phase.name} /> {/* Aşama resmi */}
+      <PhaseImage src={imageUrl} alt={phase.name} /> {/* Aşama resmi */}
       <PhaseTitle>{phase.name}</PhaseTitle> {/* Aşama adı */}
       <ProgressBar progress={progressPercentage} /> {/* İlerleme çubuğu */}
     </PhaseContainer>
