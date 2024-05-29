@@ -17,6 +17,7 @@ const image8 = require('./assets/hilal2.png');
 
 const App: React.FC = () => {
   // Mevcut fazı takip etmek için state tanımlanır
+  // eslint-disable-next-line
   const [currentPhase, setCurrentPhase] = useState(0);
   const [focusElement, setFocusElement] = useState(0);
   const images = [image1, image2, image3, image4, image5, image6, image7, image8];
@@ -69,7 +70,9 @@ const App: React.FC = () => {
 
   // Toplam faz sayısı belirlenir
   const totalPhases = moonPhases.length;
+  // eslint-disable-next-line
   const currentProgress = Math.min((currentPhase / (totalPhases - 1)) * 100, 100); // İlerleme yüzdesi 100'ü geçmez
+  // eslint-disable-next-line
   const carouselProgress = Math.min((focusElement / (images.length - 1)) * 100, 100); // Carousel ilerlemesi 100'ü geçmez
 
   return (
