@@ -3,11 +3,11 @@ import React from 'react';
 const H5PComponent: React.FC = () => {
   return (
     <>
-      <div style={{ marginBottom: '20px' }}>
+      <div style={{ marginBottom: '40px', marginTop: '40px' }}>
         <iframe
           src="https://h5p.org/h5p/embed/1489031"
           width={1091}
-          height={300}
+          height={500}
           frameBorder={0}
           allowFullScreen={true}
           allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"
