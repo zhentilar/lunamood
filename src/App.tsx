@@ -9,7 +9,6 @@ import ProgressBar from './components/ProgressBar.tsx';
 import FancyCarousel from "react-fancy-circular-carousel";
 import 'react-fancy-circular-carousel/FancyCarousel.css';
 import H5PComponent from './components/H5PComponent.tsx';
-import moonPhase from './components/MoonPhase.tsx';
 const image1 = require('./assets/yeniay.png');
 const image2 = require('./assets/hilal.png');  
 const image3 = require('./assets/ilkdordun.png');
@@ -95,7 +94,6 @@ const App: React.FC = () => {
                     totalPhases={totalPhases}
                     currentPhase={currentPhase}
                   />
-                  <img src={'https://placehold.it/100x100'} alt="Player" />
                   {/* Kontroller bileşeni mevcut fazı işaretler */}
                   <Controls
                     totalPhases={totalPhases}
