@@ -197,7 +197,7 @@ const App: React.FC = () => {
                       progress={(focusElement / (images.length - 1)) * 100}
                     />
                     <H5PComponent />
-                    <H5PComponent2 /> {/* H5PComponent bileşenini ekledim */}
+                    <H5PComponent2 />
                   </div>
                 </>
               }
