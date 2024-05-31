@@ -23,6 +23,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.H5PComponent {
+  margin-bottom: 0;
+}
+
+.H5PComponent2 {
+  margin-bottom: 0;
+  padding-bottom: 10%;
+}
+
+.container {
+  background-image: url('./assets/arkaplan.jpg');
+  background-size: 100%;
+  padding-bottom: 10%;
+}
+
+.info-box-wrapper{
+  background-color: white;
+  color: black;
+}
+
+.ProgressBar {
+  width: 90%;
+}
 
 .App-link {
   color: #61dafb;

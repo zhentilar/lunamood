@@ -6,6 +6,7 @@ import ProgressBar from './components/ProgressBar.tsx';
 import FancyCarousel from "react-fancy-circular-carousel";
 import 'react-fancy-circular-carousel/FancyCarousel.css';
 import H5PComponent from './components/H5PComponent.tsx';
+import H5PComponent2 from './components/H5PComponent2.tsx';
 const image1 = require('./assets/yeniay.png');
 const image2 = require('./assets/hilal.png');  
 const image3 = require('./assets/ilkdordun.png');
@@ -14,7 +15,6 @@ const image5 = require('./assets/dolunay.png');
 const image6 = require('./assets/siskinay2.png');
 const image7 = require('./assets/sondordun.png');
 const image8 = require('./assets/hilal2.png');
-
 const App: React.FC = () => {
   // Mevcut fazı takip etmek için state tanımlanır
   // eslint-disable-next-line
@@ -87,8 +87,8 @@ const App: React.FC = () => {
               path="/"
               element={
                 <>
-                  <div className="container" style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', justifyContent: 'center', alignItems: 'center'}}>
-                    <div className="carousel" style={{ display: 'flex',flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '140vh' }}>
+                  <div className="container" style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <div className="carousel" style={{ display: 'flex',flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: "10%", paddingBottom: "10%"}}>
                       <FancyCarousel 
                       images={images} 
                       setFocusElement={setFocusElement}
@@ -109,8 +109,9 @@ const App: React.FC = () => {
                     <div>
                     </div>
                     </div>
-                    <ProgressBar progress={(focusElement / (images.length - 1)) * 100} />
-                    <H5PComponent /> {/* H5PComponent bileşenini ekledim */}
+                    <ProgressBar progress={(focusElement / (images.length - 1)) * 100}/>
+                    <H5PComponent />
+                    <H5PComponent2 /> {/* H5PComponent bileşenini ekledim */}
                   </div>
                     </>
               }
@@ -118,7 +119,6 @@ const App: React.FC = () => {
             {/* Ay Takvimi bileşeni yolunu tanımlar */}
             <Route path="/calendar" element={<MoonCalendar />} />
           </Routes>
-          {/* İlerleme çubuğu bileşeni mevcut ilerlemeyi gösterir */}
           
         </main>
       </div>
