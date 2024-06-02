@@ -7,6 +7,7 @@ import FancyCarousel from "react-fancy-circular-carousel";
 import "react-fancy-circular-carousel/FancyCarousel.css";
 import H5PComponent from "./components/H5PComponent.tsx";
 import H5PComponent2 from "./components/H5PComponent2.tsx";
+import RiseComponent from "./components/RiseComponent.tsx";
 
 const image1 = require("./assets/yeniay.png");
 const image2 = require("./assets/hilal.png");
@@ -206,6 +207,9 @@ const App: React.FC = () => {
             <Route path="/calendar" element={<MoonCalendar />} />
           </Routes>
         </main>
+      </div>
+      <div>
+        <RiseComponent />
       </div>
     </Router>
   );
