@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import MoonCalendar from "./components/MoonCalendar.tsx";
 import ProgressBar from "./components/ProgressBar.tsx";
@@ -7,7 +7,6 @@ import FancyCarousel from "react-fancy-circular-carousel";
 import "react-fancy-circular-carousel/FancyCarousel.css";
 import H5PComponent from "./components/H5PComponent.tsx";
 import H5PComponent2 from "./components/H5PComponent2.tsx";
-import RiseComponent from "./components/RiseComponent.tsx";
 
 const image1 = require("./assets/yeniay.png");
 const image2 = require("./assets/hilal.png");
@@ -19,6 +18,7 @@ const image7 = require("./assets/sondordun.png");
 const image8 = require("./assets/hilal2.png");
 
 const App: React.FC = () => {
+
   // Mevcut fazı takip etmek için state tanımlanır
   // eslint-disable-next-line
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -145,6 +145,14 @@ const App: React.FC = () => {
       <div className="App">
         <header className="App-header">
           <h1>🌙 Lunamood</h1>
+          <ul>
+            <li>
+              <Link to="/">🏠 Anasayfa</Link>
+            </li>
+            <li>
+              <Link to="/external">➡️ Bilgiler</Link>
+            </li>
+          </ul>
         </header>
         <main className="App-main">
           <Routes>
@@ -205,13 +213,24 @@ const App: React.FC = () => {
             />
             {/* Ay Takvimi bileşeni yolunu tanımlar */}
             <Route path="/calendar" element={<MoonCalendar />} />
+            <Route path="/external" element={<ExternalPage />} />
           </Routes>
         </main>
-      </div>
-      <div>
-        <RiseComponent />
       </div>
     </Router>
   );
 };
+function ExternalPage() {
+  return (
+    <div>
+      <iframe src="https://whimsical-duckanoo-8b60a9.netlify.app/#/" 
+      title="Harici İçerik" 
+      style={{
+        width: "100%",
+        height: "100vh", // viewport'un yüksekliği kadar uzunluk
+        border: "none",
+      }}/>
+    </div>
+  );
+}
 export default App;
